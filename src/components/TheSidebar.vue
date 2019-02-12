@@ -1,5 +1,5 @@
 <template lang="pug">
-  .sidebar
+  .wrapper
     | Sidebar
 </template>
 

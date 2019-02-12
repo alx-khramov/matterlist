@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .wrapper
     | The dates bar
 </template>
 
@@ -10,5 +10,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

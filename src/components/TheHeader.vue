@@ -1,5 +1,5 @@
 <template lang="pug">
-  .header
+  .wrapper
     | Header
 </template>
 
