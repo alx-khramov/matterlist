@@ -1,6 +1,6 @@
 <template lang="pug">
-  .wrapper
-    | The dates bar
+  v-toolbar(flat color="#B9DEF2")
+
 </template>
 
 <script>

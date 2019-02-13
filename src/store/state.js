@@ -1,3 +1,3 @@
 export default {
-  isNavDrawerOpen: false
+  isNavDrawerOpen: true,
 };

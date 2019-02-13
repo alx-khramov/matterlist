@@ -1,7 +1,5 @@
 <template lang="pug">
-  v-navigation-drawer(fixed temporary app v-model="drawer")
-    v-toolbar(flat dark color="primary")
-      v-toolbar-title Matterlist
+  v-navigation-drawer(fixed clipped app v-model="drawer")
     v-list
       v-list-tile(@click="")
         v-list-tile-action

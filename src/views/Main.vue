@@ -1,8 +1,10 @@
 <template lang="pug">
   .wrapper
-    TheToolbar
     TheNavDrawer
-    TheDatesBar
+    TheToolbar
+    v-content
+      TheDatesBar
+
 </template>
 
 <script>
