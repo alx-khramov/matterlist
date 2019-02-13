@@ -17,7 +17,7 @@ export default {
   components: {
     TheToolbar,
     TheNavDrawer,
-    TheDatesBar
-  }
+    TheDatesBar,
+  },
 };
 </script>

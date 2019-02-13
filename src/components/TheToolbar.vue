@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-toolbar(color="primary" dark app clipped-left fixed)
+  v-toolbar(color="primary" dark app clipped-left fixed flat)
     v-toolbar-side-icon(@click="$store.commit('toggleNavDrawer')")
     v-toolbar-title Matterlist
     v-spacer
