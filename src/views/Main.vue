@@ -1,20 +1,20 @@
 <template lang="pug">
   .wrapper
-    TheHeader
-    TheSidebar
+    TheToolbar
+    TheNavDrawer
     TheDatesBar
 </template>
 
 <script>
-import TheHeader from "@/components/TheHeader.vue";
-import TheSidebar from "@/components/TheSidebar.vue";
+import TheToolbar from "@/components/TheToolbar.vue";
+import TheNavDrawer from "@/components/TheNavDrawer.vue";
 import TheDatesBar from "@/components/TheDatesBar.vue";
 
 export default {
   name: "home",
   components: {
-    TheHeader,
-    TheSidebar,
+    TheToolbar,
+    TheNavDrawer,
     TheDatesBar
   }
 };
