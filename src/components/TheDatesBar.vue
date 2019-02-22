@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-toolbar(dense color="#B9DEF2")
+  v-toolbar(dense color="#B9DEF2" class="toolbar")
     VDateButton(
       v-for="date in week"
       :key="getMonthDay(date)"
@@ -66,4 +66,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.toolbar {
+  z-index: 1;
+}
+</style>

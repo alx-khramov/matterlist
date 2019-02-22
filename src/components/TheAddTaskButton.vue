@@ -1,8 +1,29 @@
-<template lang="pug"></template>
+<template lang="pug">
+  v-dialog(v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition")
+    v-btn(slot="activator" color="secondary" fixed bottom right fab)
+      v-icon add
+    v-card
+      v-toolbar(color="primary" dark clipped-left flat)
+        v-btn(icon dark @click="dialog = false")
+          v-icon close
+        v-toolbar-title Create Task
+        v-spacer
+        v-btn(icon)
+          v-icon check
+      v-list
+        v-list-tile
+          v-text-field(label="Enter task text here..." single-line)
+      v-divider
+</template>
 
 <script>
 export default {
-  name: "TheAddTaskButton"
+  name: "TheAddTaskButton",
+  data() {
+    return {
+      dialog: false,
+    };
+  },
 };
 </script>
 

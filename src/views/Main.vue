@@ -5,15 +5,15 @@
     v-content
       TheDatesBar
       TheTaskLists
-    v-btn(color="secondary" fixed bottom right fab)
-      v-icon add
+    TheAddTaskButton
 </template>
 
 <script>
-import TheToolbar from "@/components/TheToolbar.vue";
-import TheNavDrawer from "@/components/TheNavDrawer.vue";
-import TheDatesBar from "@/components/TheDatesBar.vue";
-import TheTaskLists from "@/components/TheTaskLists.vue";
+import TheToolbar from "@/components/TheToolbar";
+import TheNavDrawer from "@/components/TheNavDrawer";
+import TheDatesBar from "@/components/TheDatesBar";
+import TheTaskLists from "@/components/TheTaskLists";
+import TheAddTaskButton from "@/components/TheAddTaskButton";
 
 export default {
   name: "home",
@@ -22,6 +22,7 @@ export default {
     TheNavDrawer,
     TheDatesBar,
     TheTaskLists,
+    TheAddTaskButton,
   },
 };
 </script>
