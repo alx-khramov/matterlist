@@ -5,6 +5,8 @@
     v-content
       TheDatesBar
       TheTaskLists
+    v-btn(color="secondary" fixed bottom right fab)
+      v-icon add
 </template>
 
 <script>
