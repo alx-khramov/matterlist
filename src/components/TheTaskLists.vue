@@ -1,6 +1,6 @@
 <template lang="pug">
   .wrapper
-    VTaskList(v-for="taskList in taskLists" :allTasks="tasks" :taskList="taskList" :key="taskList.id")
+    VTaskList(v-for="taskList in taskLists" :allTasks="allTasks" :taskList="taskList" :key="taskList.id")
 </template>
 
 <script>
@@ -14,8 +14,8 @@ export default {
   },
   computed: {
     ...mapState({
-      tasks: (state) => state.tasks,
-      taskLists: (state) => state.taskLists,
+      allTasks: (state) => state.tasks.items,
+      taskLists: (state) => state.taskLists.items,
     }),
   },
 };
