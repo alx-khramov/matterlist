@@ -8,25 +8,29 @@
           v-icon close
         v-toolbar-title Create Task
         v-spacer
-        v-btn(icon)
+        v-btn(icon @click="addTask")
           v-icon check
       v-list
         v-list-tile
-          v-text-field(label="Enter task text here..." single-line)
-      v-divider
+          v-text-field(label="Enter task text here..." single-line v-model="taskText")
 </template>
 
 <script>
 export default {
-  name: "TheAddTaskButton",
+  name: "TheTaskAdder",
   data() {
     return {
       dialog: false,
+      taskText: "",
     };
+  },
+  methods: {
+    addTask() {
+      this.dialog = false;
+      this.taskText = "";
+    },
   },
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

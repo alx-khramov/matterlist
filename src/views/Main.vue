@@ -5,7 +5,7 @@
     v-content
       TheDatesBar
       TheTaskLists
-    TheAddTaskButton
+    TheTaskAdder
 </template>
 
 <script>
@@ -13,7 +13,7 @@ import TheToolbar from "@/components/TheToolbar";
 import TheNavDrawer from "@/components/TheNavDrawer";
 import TheDatesBar from "@/components/TheDatesBar";
 import TheTaskLists from "@/components/TheTaskLists";
-import TheAddTaskButton from "@/components/TheAddTaskButton";
+import TheTaskAdder from "@/components/TheTaskAdder";
 
 export default {
   name: "home",
@@ -22,7 +22,7 @@ export default {
     TheNavDrawer,
     TheDatesBar,
     TheTaskLists,
-    TheAddTaskButton,
+    TheTaskAdder,
   },
 };
 </script>
