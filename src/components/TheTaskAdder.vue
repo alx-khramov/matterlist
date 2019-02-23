@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     addTask() {
+      this.$store.dispatch("tasks/add", this.taskText);
       this.dialog = false;
       this.taskText = "";
     },
