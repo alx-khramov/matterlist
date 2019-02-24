@@ -1,18 +1,8 @@
+import Task from "@/models/Task";
+
 export default {
   items: {
-    1: {
-      id: "1",
-      text: "First task",
-      listId: "0",
-      parentTask: null,
-      subTasks: null,
-    },
-    2: {
-      id: "2",
-      text: "Second task",
-      listId: "0",
-      parentTask: null,
-      subTasks: null,
-    },
+    1: new Task({ id: "1", text: "First task" }),
+    2: new Task({ id: "2", text: "Second task" }),
   },
 };

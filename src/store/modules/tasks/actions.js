@@ -1,16 +1,11 @@
 import nanoid from "nanoid";
+import Task from "@/models/Task";
 
 export default {
-  add({ commit }, taskText) {
+  add({ commit }, { text, taskListId }) {
     const id = nanoid();
-    const task = {
-      id: id,
-      text: taskText,
-      listId: "0",
-      parentTask: null,
-      subTasks: null,
-    };
+    const task = new Task({ id, text, taskListId });
     commit("add", task);
-    commit("taskLists/add", id, { root: true });
+    commit("taskLists/add", { id, taskListId }, { root: true });
   },
 };

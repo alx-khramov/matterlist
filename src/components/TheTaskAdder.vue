@@ -13,6 +13,8 @@
       v-list
         v-list-tile
           v-text-field(label="Enter task text here..." single-line v-model="taskText")
+        v-list-tile(class="mt-3")
+          v-select(label="Task List" :items="taskLists" v-model="taskListId")
 </template>
 
 <script>
@@ -22,11 +24,19 @@ export default {
     return {
       dialog: false,
       taskText: "",
+      taskListId: "0",
     };
+  },
+  computed: {
+    taskLists() {
+      return Object.values(this.$store.state.taskLists.items).map(
+        ({ id, name }) => ({ value: id, text: name })
+      );
+    },
   },
   methods: {
     addTask() {
-      this.$store.dispatch("tasks/add", this.taskText);
+      this.$store.dispatch("tasks/add", { text: this.taskText, taskListId: this.taskListId });
       this.dialog = false;
       this.taskText = "";
     },

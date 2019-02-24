@@ -1,5 +1,5 @@
 export default {
-  add(state, id) {
-    state.items[0].taskIds.push(id);
+  add(state, { id, taskListId }) {
+    state.items[taskListId].taskIds.push(id);
   },
 };
