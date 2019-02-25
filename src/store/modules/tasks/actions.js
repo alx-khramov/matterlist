@@ -8,4 +8,7 @@ export default {
     commit("add", task);
     commit("taskLists/add", { id, taskListId }, { root: true });
   },
+  toggleComplete({ commit }, id) {
+    commit("toggleComplete", id);
+  },
 };

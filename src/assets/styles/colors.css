@@ -1,0 +1,6 @@
+/* Also use Vuetify Colors, set in plugins/vuetify.js */
+
+:root {
+  --c-grey-light: #999;
+  --c-grey-dark: #333;
+}

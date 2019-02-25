@@ -32,7 +32,7 @@ export default {
   text-align: center;
   outline: none;
   line-height: 1.2;
-  color: #333;
+  color: var(--c-grey-dark);
 
   &.isActive {
     background: #fff;
@@ -43,11 +43,11 @@ export default {
   }
 
   &.isPast {
-    color: #999;
+    color: var(--c-grey-light);
   }
 
   &.isWeekend {
-    color: #e91e63;
+    color: var(--v-secondary-base);
   }
 }
 

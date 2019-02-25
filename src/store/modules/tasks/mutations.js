@@ -1,6 +1,9 @@
 export default {
-  add(state, payload) {
-    const { id } = payload;
-    state.items[id] = payload;
+  add(state, task) {
+    const { id } = task;
+    state.items[id] = task;
+  },
+  toggleComplete(state, id) {
+    state.items[id].isComplete = !state.items[id].isComplete;
   },
 };
