@@ -1,1 +1,5 @@
-export default {};
+export default {
+  toggleOnlyStarredTasksShown({ commit }) {
+    commit("toggleOnlyStarredTasksShown");
+  },
+};

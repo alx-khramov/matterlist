@@ -20,7 +20,13 @@ export default {
   },
   computed: {
     currentListTasks() {
-      return this.taskList.taskIds.map((taskId) => this.allTasks[taskId]);
+      let tasks = this.taskList.taskIds.map((taskId) => this.allTasks[taskId]);
+
+      if (this.$store.state.isOnlyStarredTasksShown) {
+        tasks = tasks.filter((task) => task.isStarred);
+      }
+
+      return tasks;
     },
   },
   props: {
