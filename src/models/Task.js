@@ -3,9 +3,13 @@ class Task {
     this.id = id;
     this.text = text;
     this.taskListId = taskListId;
-    this.isComplete = false;
+    this.completionDate = null;
     this.parentTask = null;
     this.subTasks = null;
+  }
+
+  get isComplete() {
+    return this.completionDate !== null;
   }
 }
 

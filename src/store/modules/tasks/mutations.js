@@ -4,6 +4,10 @@ export default {
     state.items[id] = task;
   },
   toggleComplete(state, id) {
-    state.items[id].isComplete = !state.items[id].isComplete;
+    if (state.items[id].completionDate === null) {
+      state.items[id].completionDate = new Date();
+    } else {
+      state.items[id].completionDate = null;
+    }
   },
 };
