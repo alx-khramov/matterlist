@@ -1,9 +1,9 @@
 class Task {
-  constructor({ id, text, taskListId }) {
+  constructor({ id, text, taskListId, isStarred = false }) {
     this.id = id;
     this.text = text;
     this.taskListId = taskListId;
-    this.isStarred = false;
+    this.isStarred = isStarred;
     this.completionDate = null;
     this.parentTask = null;
     this.subTasks = null;

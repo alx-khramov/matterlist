@@ -13,16 +13,26 @@
         v-btn(@click="addTask" icon)
           v-icon check
       v-list
-        v-list-tile
-          v-text-field(v-model="taskData.text" label="Enter task text here..." single-line)
-        v-list-tile(class="mt-3")
-          v-select(:items="taskLists" v-model="taskData.listId" label="Task List")
+        v-list-tile(class="mt-2")
+          v-layout
+            v-text-field(v-model="taskData.text" label="Enter task text here...")
+            v-checkbox(
+              v-model="taskData.isStarred"
+              on-icon="star"
+              off-icon="star_border"
+              color="secondary"
+              hide-details
+              class="shrink ml-3"
+            )
+        v-list-tile(class="mt-2")
+          v-select(:items="taskLists" v-model="taskData.taskListId")
 </template>
 
 <script>
 const initialTaskData = {
   text: "",
-  listId: "0",
+  taskListId: "0",
+  isStarred: false,
 };
 
 export default {
@@ -42,10 +52,7 @@ export default {
   },
   methods: {
     addTask() {
-      this.$store.dispatch("tasks/add", {
-        text: this.taskData.text,
-        taskListId: this.taskData.listId,
-      });
+      this.$store.dispatch("tasks/add", this.taskData);
       this.dialog = false;
       this.taskData = { ...initialTaskData };
     },
