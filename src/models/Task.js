@@ -3,6 +3,7 @@ class Task {
     this.id = id;
     this.text = text;
     this.taskListId = taskListId;
+    this.isStarred = false;
     this.completionDate = null;
     this.parentTask = null;
     this.subTasks = null;

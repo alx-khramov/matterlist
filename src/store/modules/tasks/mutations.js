@@ -10,4 +10,7 @@ export default {
       state.items[id].completionDate = null;
     }
   },
+  toggleStarred(state, id) {
+    state.items[id].isStarred = !state.items[id].isStarred;
+  },
 };

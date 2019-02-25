@@ -6,8 +6,9 @@
     v-list-tile-content
       v-list-tile-title(class="taskTitle" :class="{ 'isComplete' : task.isComplete }")
         | {{ task.text }}
-    v-list-tile-action
-      v-icon(color="grey lighten-1") star_border
+    v-list-tile-action(@click="toggleStarred")
+      v-icon(color="secondary" v-if="task.isStarred") star
+      v-icon(color="grey lighten-1" v-else) star_border
 </template>
 
 <script>
@@ -19,6 +20,9 @@ export default {
   methods: {
     toggleComplete() {
       this.$store.dispatch("tasks/toggleComplete", this.task.id);
+    },
+    toggleStarred() {
+      this.$store.dispatch("tasks/toggleStarred", this.task.id);
     },
   },
 };

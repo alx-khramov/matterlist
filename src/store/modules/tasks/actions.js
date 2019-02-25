@@ -11,4 +11,7 @@ export default {
   toggleComplete({ commit }, id) {
     commit("toggleComplete", id);
   },
+  toggleStarred({ commit }, id) {
+    commit("toggleStarred", id);
+  },
 };
