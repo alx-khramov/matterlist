@@ -3,6 +3,8 @@
     v-btn(slot="activator" color="secondary" fixed bottom right fab)
       v-icon add
     v-card
+      v-btn(color="primary" fixed bottom right fab @click="addTask")
+        v-icon check
       v-toolbar(color="primary" dark clipped-left flat)
         v-btn(icon dark @click="dialog = false")
           v-icon close
