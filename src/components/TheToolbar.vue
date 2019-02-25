@@ -3,12 +3,12 @@
     v-toolbar-side-icon(@click="$store.commit('toggleNavDrawer')")
     v-toolbar-title Matterlist
     v-spacer
-    v-btn(icon)
-      v-icon(medium) query_builder
+    <!--v-btn(icon)-->
+      <!--v-icon(medium) query_builder-->
     v-btn(icon)
       v-icon(medium) star_border
-    v-btn(icon)
-      v-icon(medium) more_horiz
+    <!--v-btn(icon)-->
+      <!--v-icon(medium) more_horiz-->
 </template>
 
 <script>
