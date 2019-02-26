@@ -1,7 +1,9 @@
 export default {
-  add(state, task) {
-    const { id } = task;
-    state.items[id] = task;
+  create(state, task) {
+    state.items[task.id] = task;
+  },
+  update(state, task) {
+    state.items[task.id] = task;
   },
   toggleComplete(state, id) {
     if (state.items[id].completionDate === null) {

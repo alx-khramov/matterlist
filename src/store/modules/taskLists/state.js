@@ -3,7 +3,7 @@ export default {
     0: {
       id: "0",
       name: "Inbox",
-      taskIds: [1, 2],
+      taskIds: ["1", "2"],
     },
     1: {
       id: "1",

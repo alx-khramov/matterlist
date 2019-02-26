@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-list-tile(:key="task.id" @click="")
+  v-list-tile(:key="task.id" @click="openTaskEditDialog")
     v-list-tile-action(@click="toggleComplete")
       v-icon(color="grey lighten-1" v-if="task.isComplete") check_box
       v-icon(color="grey lighten-1" v-else) check_box_outline_blank
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "VTask",
+  name: "Task",
   props: {
     task: Object,
   },
@@ -23,6 +23,9 @@ export default {
     },
     toggleStarred() {
       this.$store.dispatch("tasks/toggleStarred", this.task.id);
+    },
+    openTaskEditDialog() {
+      this.$store.commit("openTaskEditDialog", this.task);
     },
   },
 };

@@ -1,16 +1,16 @@
 <template lang="pug">
   .wrapper
-    VTaskList(v-for="taskList in taskLists" :allTasks="allTasks" :taskList="taskList" :key="taskList.id")
+    TaskList(v-for="taskList in taskLists" :allTasks="allTasks" :taskList="taskList" :key="taskList.id")
 </template>
 
 <script>
 import { mapState } from "vuex";
-import VTaskList from "@/components/VTaskList.vue";
+import TaskList from "@/components/TaskList.vue";
 
 export default {
   name: "TheTaskLists",
   components: {
-    VTaskList,
+    TaskList,
   },
   computed: {
     ...mapState({

@@ -6,17 +6,17 @@
     v-divider
     v-list(class="task-list")
       template(v-for="task in currentListTasks")
-        VTask(:task="task")
+        Task(:task="task")
         v-divider
 </template>
 
 <script>
-import VTask from "@/components/VTask";
+import Task from "@/components/Task";
 
 export default {
-  name: "VTaskList",
+  name: "TaskList",
   components: {
-    VTask,
+    Task,
   },
   computed: {
     currentListTasks() {
