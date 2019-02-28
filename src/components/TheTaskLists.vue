@@ -1,6 +1,6 @@
 <template lang="pug">
   .wrapper
-    TaskList(v-for="taskList in taskLists" :allTasks="allTasks" :taskList="taskList" :key="taskList.id")
+    TaskList(v-for="taskList in taskLists" :filteredTasks="filteredTasks" :taskList="taskList" :key="taskList.id")
 </template>
 
 <script>
@@ -12,9 +12,11 @@ export default {
   components: {
     TaskList,
   },
+  props: {
+    filteredTasks: Object,
+  },
   computed: {
     ...mapState({
-      allTasks: (state) => state.tasks.items,
       taskLists: (state) => state.taskLists.items,
     }),
   },

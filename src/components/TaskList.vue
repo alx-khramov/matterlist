@@ -18,20 +18,16 @@ export default {
   components: {
     Task,
   },
+  props: {
+    filteredTasks: Object,
+    taskList: Object,
+  },
   computed: {
     currentListTasks() {
-      let tasks = this.taskList.taskIds.map((taskId) => this.allTasks[taskId]);
-
-      if (this.$store.state.isOnlyStarredTasksShown) {
-        tasks = tasks.filter((task) => task.isStarred);
-      }
-
-      return tasks;
+      return this.taskList.taskIds
+        .map((taskId) => this.filteredTasks[taskId])
+        .filter((task) => task !== undefined);
     },
-  },
-  props: {
-    allTasks: Object,
-    taskList: Object,
   },
 };
 </script>

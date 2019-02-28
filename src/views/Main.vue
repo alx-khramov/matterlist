@@ -4,7 +4,7 @@
     TheToolbar
     v-content
       TheDatesBar
-      TheTaskLists
+      TheTasksArea
     TheTaskCreateFAB
     TheTaskCreateDialog
     TheTaskEditDialog
@@ -14,7 +14,7 @@
 import TheToolbar from "@/components/TheToolbar";
 import TheNavDrawer from "@/components/TheNavDrawer";
 import TheDatesBar from "@/components/TheDatesBar";
-import TheTaskLists from "@/components/TheTaskLists";
+import TheTasksArea from "@/components/TheTasksArea";
 import TheTaskCreateFAB from "@/components/taskDialog/TheTaskCreateFAB";
 import TheTaskCreateDialog from "@/components/taskDialog/TheTaskCreateDialog";
 import TheTaskEditDialog from "@/components/taskDialog/TheTaskEditDialog";
@@ -25,7 +25,7 @@ export default {
     TheToolbar,
     TheNavDrawer,
     TheDatesBar,
-    TheTaskLists,
+    TheTasksArea,
     TheTaskCreateFAB,
     TheTaskCreateDialog,
     TheTaskEditDialog,
