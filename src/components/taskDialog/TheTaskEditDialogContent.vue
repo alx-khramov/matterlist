@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import VTaskDialogContent from "@/components/VTaskDialogContent";
+import VTaskDialogContent from "./VTaskDialogContent";
 
 export default {
   name: "TheTaskEditDialogContent",

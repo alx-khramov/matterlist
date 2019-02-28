@@ -15,9 +15,9 @@ import TheToolbar from "@/components/TheToolbar";
 import TheNavDrawer from "@/components/TheNavDrawer";
 import TheDatesBar from "@/components/TheDatesBar";
 import TheTaskLists from "@/components/TheTaskLists";
-import TheTaskCreateFAB from "@/components/TheTaskCreateFAB";
-import TheTaskCreateDialog from "@/components/TheTaskCreateDialog";
-import TheTaskEditDialog from "@/components/TheTaskEditDialog";
+import TheTaskCreateFAB from "@/components/taskDialog/TheTaskCreateFAB";
+import TheTaskCreateDialog from "@/components/taskDialog/TheTaskCreateDialog";
+import TheTaskEditDialog from "@/components/taskDialog/TheTaskEditDialog";
 
 export default {
   name: "home",

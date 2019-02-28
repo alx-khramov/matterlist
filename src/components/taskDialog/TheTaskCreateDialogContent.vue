@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import VTaskDialogContent from "@/components/VTaskDialogContent";
+import VTaskDialogContent from "./VTaskDialogContent";
 
 const initialTaskData = {
   text: "",

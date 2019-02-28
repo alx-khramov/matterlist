@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import VTaskDialog from "@/components/VTaskDialog";
-import TheTaskEditDialogContent from "@/components/TheTaskEditDialogContent";
+import VTaskDialog from "./VTaskDialog";
+import TheTaskEditDialogContent from "./TheTaskEditDialogContent";
 
 export default {
   name: "TheTaskEditDialog",
