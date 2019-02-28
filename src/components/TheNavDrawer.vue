@@ -63,9 +63,9 @@ export default {
         if (value !== this.$store.state.isNavDrawerOpen) {
           this.$store.commit("toggleNavDrawer");
         }
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 
